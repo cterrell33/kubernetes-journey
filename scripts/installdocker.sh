@@ -16,3 +16,6 @@ sudo docker version
 
 # Docker Automatically creates a group make sure to add user to the docker group
 sudo usermod -a -G docker cloud_user
+
+# Test Installation - use docker run command
+docker run hello-world
