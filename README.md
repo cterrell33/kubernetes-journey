@@ -1,4 +1,5 @@
-# kubernetesjourney
+# kubernetes-journey
+
 This repo serves to document my learning of Docker/Kubernetes.
 Also in hopes that anyone who comes behind me can follow my instructions and easily learn as well.
 
