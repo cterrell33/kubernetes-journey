@@ -3,6 +3,11 @@ This repo serves to document my learning of Docker/Kubernetes.
 Also in hopes that anyone who comes behind me can follow my instructions and easily learn as well.
 
 "When you learn,teach, when you get,give" - Maya Angelou
+
+Courses I took
+1. Docker-acloud-guru (lost link will find later)
+2. https://kodekloud.com/courses/kubernetes-and-cloud-native-associate-kcna/
+3. https://kodekloud.com/courses/certified-kubernetes-administrator-cka/
 _____________________________________________________________________________________________
 
 Initially I set out to learn Kubernetes and just purely document my learning journey in this repo, now I've decided to pivot from that decision and actually make this repo a mix of automated process, it will include the following:

@@ -20,8 +20,6 @@ spec:
   selector:
     matchLabels:
       type: front-end
-
-## https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/ ##
-
+## https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 
 ##kubectl create -f pod-define.yml
