@@ -14,8 +14,8 @@ Initially I set out to learn Kubernetes and just purely document my learning jou
    - Deploy AWS EKS using Terraform 
    - Automate & Deploy K8 resources using manifest files
    - Deploy an application
-   - ......
-
+   - To Be Continued....
+   
 Journey So far:
  1. See /terraform/ folder for the resources deployed into AWS:
     - EKS Cluster
