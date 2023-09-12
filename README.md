@@ -1,25 +1,23 @@
-# kuebernetesjourney
-This repo serves to document my learning of Docker/Kuebernetes.
+# kubernetesjourney
+This repo serves to document my learning of Docker/Kubernetes.
 Also in hopes that anyone who comes behind me can follow my instructions and easily learn as well.
 
 "When you learn,teach, when you get,give" - Maya Angelou
+_____________________________________________________________________________________________
 
-docker cheat sheet
-    "docker info"
+Initially I set out to learn Kubernetes and just purely document my learning journey in this repo, now I've decided to pivot from that decision and actually make this repo a mix of automated process, it will include the following:
+    - Deploy AWS EKS using Terraform 
+    - Automate & Deploy K8 resources using manifest files
+    - Deploy an application
+    ......
 
-1. Install Docker
-    - I have did the pleasure of putting the install in a script: scripts/installdocker.sh
-2. Docker Automatically creates a group make sure to add user to the docker group:
-sudo usermod -a -G docker cloud_user
-
-3. Select Storage Driver
-    - overlay2 - if there's a lot of reading 
-    - devicemapper - if there will be a lot of writing
-    Change by editing: vim /etc/docker/daemon.json *must be valid json*
-        {
-            "storage-driver": "device-mapper"
-        }
-    You just made a change to an "important" file
-    - restart : sudo systemctl daemon-reload
-    - restart : sudo sysmtectl restart docker
- 
+Journey So far:
+ 1. See /terraform/ folder for the resources deployed into AWS:
+    - EKS Cluster
+    - IAM Resources
+ 2. Will begin on building manifest files
+    - Deployment 
+    - Ingress Controller
+    - Persistent Volume 
+    - Persistent Volume Claim 
+    Later I may figure out how to automate this my self
