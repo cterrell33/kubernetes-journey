@@ -11,10 +11,10 @@ Courses I took
 _____________________________________________________________________________________________
 
 Initially I set out to learn Kubernetes and just purely document my learning journey in this repo, now I've decided to pivot from that decision and actually make this repo a mix of automated process, it will include the following:
-    - Deploy AWS EKS using Terraform 
-    - Automate & Deploy K8 resources using manifest files
-    - Deploy an application
-    - ......
+   - Deploy AWS EKS using Terraform 
+   - Automate & Deploy K8 resources using manifest files
+   - Deploy an application
+   - ......
 
 Journey So far:
  1. See /terraform/ folder for the resources deployed into AWS:
