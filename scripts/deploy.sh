@@ -1,6 +1,10 @@
 #!/bin/bash -e 
 
-deployment=deploy-def
-ingressctrl=nginx-ingress-controller-deploy
+# create a for loop that loops through list of manifest file and applies each
+# determine where this will be ran from 
 
-kubectl apply -f ../manifest/$ingressctrl.yaml
+for f in ../manifest/*-define.yaml; do
+printf "$f"
+kubectl apply -f ../manifest/"$f"
+
+done
