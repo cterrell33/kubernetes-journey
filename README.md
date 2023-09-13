@@ -18,6 +18,10 @@ Initially I set out to learn Kubernetes and just purely document my learning jou
    - Possibly deploy ArgoCD
    - To Be Continued....
 
+Prerequiste:
+   - Install Kubectl 
+   - Install helm 
+   
 Journey So far:
  1. See /terraform/ folder for the resources deployed into AWS:
     - EKS Cluster

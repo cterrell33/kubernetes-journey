@@ -8,10 +8,9 @@ metadata:
 spec:
   template:
     metadata:
-      name: myapp-pod
+      name: ansible-awx
       labels:
-          app: myapp
-          type: front-end
+          app: ansible-awx
     spec:
       containers:
         - name: nginx-container
