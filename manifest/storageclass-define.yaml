@@ -7,4 +7,4 @@ provisioner: kubernetes.io/aws-ebs
 parameters:
   type: gp2
 reclaimPolicy: Retain
-volumeBindingMode: WaitForFirstConsumer
+volumeBindingMode: Immediate

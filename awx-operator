@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>awx-operator Helm charts | awx-operator</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="awx-operator Helm charts" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. 🤖" />
+<meta property="og:description" content="An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. 🤖" />
+<link rel="canonical" href="https://ansible.github.io/awx-operator/" />
+<meta property="og:url" content="https://ansible.github.io/awx-operator/" />
+<meta property="og:site_name" content="awx-operator" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="awx-operator Helm charts" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"An Ansible AWX operator for Kubernetes built with Operator SDK and Ansible. 🤖","headline":"awx-operator Helm charts","name":"awx-operator","url":"https://ansible.github.io/awx-operator/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/awx-operator/assets/css/style.css?v=edc191c6670f35ceee694bd9372006b00124f5ad">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/awx-operator/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://ansible.github.io/awx-operator/">awx-operator</a></h1>
+      
+
+      <h1 id="awx-operator-helm-charts">awx-operator Helm charts</h1>
+
+<h2 id="usage">Usage</h2>
+
+<p><a href="https://helm.sh">Helm</a> must be installed to use the charts.  Please refer to
+Helm’s <a href="https://helm.sh/docs">documentation</a> to get started.</p>
+
+<p>Once Helm has been set up correctly, add the repo as follows:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>helm repo add awx-operator https://ansible.github.io/awx-operator/
+</code></pre></div></div>
+
+<p>If you had already added this repo earlier, run <code class="language-plaintext highlighter-rouge">helm repo update</code> to retrieve
+the latest versions of the packages.  You can then run <code class="language-plaintext highlighter-rouge">helm search repo
+awx-operator</code> to see the charts.</p>
+
+<p>To install the <code class="language-plaintext highlighter-rouge">awx-operator</code> chart:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>helm <span class="nb">install </span>my-awx-operator awx-operator/awx-operator
+</code></pre></div></div>
+
+<p>To install a specific awx-operator helm chart version in a specific namespace:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>helm install my-awx-operator awx-operator/awx-operator -n awx --create-namespace -f my-values.yml --version 1.3.0
+</code></pre></div></div>
+
+<p>To uninstall the chart:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>helm delete my-awx-operator
+</code></pre></div></div>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/ansible/awx-operator/edit/gh-pages/README.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

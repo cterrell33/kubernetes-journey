@@ -13,4 +13,5 @@ spec:
     requests:
       storage: 3Gi
   volumeMode: Filesystem
-  volumeName: pv
+  volumeName: pv01
+  storageClassName: gp2

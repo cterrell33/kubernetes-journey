@@ -9,7 +9,8 @@ spec:
   capacity:
     storage: 5Gi
   volumeMode: Filesystem
+  storageClassName: gp2
   accessModes:
   - ReadWriteOnce
   awsElasticBlockStore:
-    volumeID: vol-01960e5d2084737a8
+    volumeID: vol-0f23ee2dc832d0402

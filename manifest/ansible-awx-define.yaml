@@ -5,4 +5,4 @@ metadata:
   namespace: awx
 spec:
   service_type: nodeport
-  postgres_storage_class: gp2
+  postgres_storage_class: local-storage

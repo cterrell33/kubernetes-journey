@@ -6,12 +6,12 @@ variable cluster_name {
 
 variable subnet1 {
   type        = string
-  default     = "subnet-08a0faf401289a8cc"
+  default     = "subnet-01241493191716961"
   description = "subnet1 id"
 }
 
 variable subnet2 {
   type        = string
-  default     = "subnet-04f51ecd9c956a8bd"
+  default     = "subnet-0afaac8782818d4f0"
   description = "subnet2 id"
 }
