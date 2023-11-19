@@ -1,17 +1,17 @@
-variable cluster_name {
+variable "cluster_name" {
   type        = string
   default     = "cmoloot-eks-cluster"
   description = "name of cluser"
 }
 
-variable subnet1 {
+variable "subnet1" {
   type        = string
-  default     = "subnet-01241493191716961"
+  default     = "subnet-05867702686ddbab0"
   description = "subnet1 id"
 }
 
-variable subnet2 {
+variable "subnet2" {
   type        = string
-  default     = "subnet-0afaac8782818d4f0"
+  default     = "subnet-001f7ac9ede283998"
   description = "subnet2 id"
 }
