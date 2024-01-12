@@ -26,10 +26,10 @@ spec:
     required:
       nodeSelectorTerms:
       - matchExpressions:
-        - key: kubernetes.io/hostname
+        - key: kubernetes.io/os
           operator: In
           values:
-          - "ip-10-0-103-79.ec2.internal"
+          - "linux"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -37,6 +37,7 @@ metadata:
   name: postgres-13-ansible-awx-postgres-13-0
   namespace: awx
 spec:
+  volumeName: postgres-pv
   storageClassName: local-storage
   accessModes:
     - ReadWriteOnce

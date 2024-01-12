@@ -24,6 +24,7 @@ resource "aws_eks_cluster" "this" {
 
   vpc_config {
     subnet_ids = module.vpc.public_subnets
+    security_group_ids = [aws_security_group.clustersg.id]
   }
 
   # Ensure that IAM Role permissions are created before and deleted after EKS Cluster handling.
@@ -31,6 +32,7 @@ resource "aws_eks_cluster" "this" {
   depends_on = [
     aws_iam_role_policy_attachment.AmazonEKSClusterPolicy,
     aws_iam_role_policy_attachment.AmazonEKSVPCResourceController,
+    aws_security_group.clustersg,
     module.vpc
   ]
 }
@@ -63,6 +65,30 @@ resource "aws_iam_role_policy_attachment" "AmazonEKSClusterPolicy" {
 resource "aws_iam_role_policy_attachment" "AmazonEKSVPCResourceController" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"
   role       = aws_iam_role.this.name
+}
+
+resource "aws_security_group" "clustersg"{
+    name        = "${var.cluster_name}_security_group"
+    vpc_id      = module.vpc.vpc_id
+    dynamic "ingress" {
+        for_each = var.rules
+        content {
+            description     = ingress.value["description"]
+            from_port       = ingress.value["from_port"]
+            to_port         = ingress.value["to_port"]
+            protocol        = ingress.value["protocol"]
+            cidr_blocks     = ingress.value["cidr_blocks"]
+        }
+    }
+    egress {
+        from_port   = 0
+        to_port     = 0
+        protocol    = "-1"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+    tags = {
+        Name = "Built_for_${var.cluster_name}"
+}
 }
 
 module "key_pair" {
@@ -103,6 +129,7 @@ resource "aws_eks_node_group" "this" {
 
   remote_access {
     ec2_ssh_key = module.key_pair.key_pair_name
+    source_security_group_ids = [aws_security_group.clustersg.id]
   }
 
   # Ensure that IAM Role permissions are created before and deleted after EKS Node Group handling.
